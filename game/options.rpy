@@ -23,13 +23,14 @@ define gui.show_name = True
 
 ## Версия игры.
 
-define config.version = "0.6"
+define config.version = "0.7"
 
 
 ## Текст, помещённый в экран "Об игре". Поместите текст между тройными скобками.
 ## Для отделения абзацев оставляйте между ними пустую строку.
 
 define gui.about = _p("""
+
 """)
 
 
@@ -37,7 +38,7 @@ define gui.about = _p("""
 ## постройке дистрибутивов. Оно должно содержать текст формата ASCII и не должно
 ## содержать пробелы, двоеточия и точки с запятой.
 
-define build.name = "Noventure"
+define build.name = "Traveler's_Tale"
 
 
 ## Звуки и музыка ##############################################################
@@ -48,7 +49,7 @@ define build.name = "Noventure"
 
 define config.has_sound = True
 define config.has_music = True
-define config.has_voice = True
+define config.has_voice = False
 
 
 ## Чтобы разрешить игроку тестировать громкость на звуковом или голосовом

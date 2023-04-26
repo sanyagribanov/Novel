@@ -4,12 +4,11 @@
 
 # Определение персонажей игры.
 define c = Character('Шарлотта', color="#6d4bc4")
-define m = Character('Марианна', color="#773b3b", image='marianna')
+define mar = Character('Марианна', color="#773b3b", image='marianna')
 define n = Character(None, kind=nvl)
 define g = Character('Девушка', color="#298d12", image='martha')
 define mt = Character('Марта', color="#298d12", image='martha')
-define razb = Character('Разбойник', color="#da0000", image='razboinik')
-define v = Character('Голос', color="#da0000")
+define u = Character('Дядя Марты', color="#1f6f97", image='uncle')
 
 define config.mouse={"default" : [("gui/cursors/Cursor 003_Green.png", 0,0)]}
 #Аудио
@@ -31,9 +30,8 @@ define music.soul = "music/Soul.mp3"
 # а eileen happy — "eileen happy.webp", и тогда они появятся в игре.
 
 init:
-    $ left_2 = Position(xalign=0.2, yalign=1.1)
-    $ right_2 = Position(xalign=0.8, yalign=1.1)
-    $ down_1 = Position(xalign=0.5, yalign=2)
+    $ left_2 = Position(xpos=0.3, ypos=1.1)
+    $ right_2 = Position(xpos=0.7, ypos=1.1)
 
 init:
     python:
