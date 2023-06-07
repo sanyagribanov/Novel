@@ -3,12 +3,12 @@
 # Вы можете расположить сценарий своей игры в этом файле.
 
 # Определение персонажей игры.
-define c = Character('Шарлотта', color="#6d4bc4")
-define mar = Character('Марианна', color="#773b3b", image='marianna')
+define c = Character('Шарлотта', color="#3c296d")
+define mar = Character('Марианна', color="#5f1919", image='marianna')
 define n = Character(None, kind=nvl)
-define g = Character('Девушка', color="#298d12", image='martha')
-define mt = Character('Марта', color="#298d12", image='martha')
-define u = Character('Дядя Марты', color="#1f6f97", image='uncle')
+define g = Character('Девушка', color="#1c660c", image='martha')
+define mt = Character('Марта', color="#1c660c", image='martha')
+define u = Character('Дядя Марты', color="#0e425d", image='uncle')
 
 define config.mouse={"default" : [("gui/cursors/Cursor 003_Green.png", 0,0)]}
 #Аудио
@@ -22,16 +22,20 @@ define nature.fireplace = "audio/fireplace.ogg"
 define music.peace = "music/New-Endings.ogg"
 define music.wbird = "music/Waterbird.ogg"
 define music.tgp = "music/The-Golden-Peas.ogg"
-define music.soul = "music/Soul.mp3"
+define music.soul = "music/Soul.ogg"
 
 # Вместо использования оператора image можете просто
 # складывать все ваши файлы изображений в папку images.
 # Например, сцену bg room можно вызвать файлом "bg room.png",
 # а eileen happy — "eileen happy.webp", и тогда они появятся в игре.
 
+define flashbulb = Fade(0.2, 0.0, 0.8, color='#fff')
+ 
+
 init:
     $ left_2 = Position(xpos=0.3, ypos=1.1)
     $ right_2 = Position(xpos=0.7, ypos=1.1)
+    $ center_2 = Position(xpos=0.5, ypos=1.1)
 
 init:
     python:
@@ -94,3 +98,6 @@ init:
 init:
     $ sshake = Shake((0,0,0,0), 1.0, dist = 15)
     
+init:
+    python:
+        NotebookCount = 0

@@ -297,7 +297,7 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Начать") action Start()
+            textbutton _("В путь!") action Start()
 
         else:
 
@@ -328,7 +328,7 @@ screen navigation():
 
             ## Кнопка выхода блокирована в iOS и не нужна на Android и в веб-
             ## версии.
-            textbutton _("Выход") action Quit(confirm=not main_menu)
+            textbutton _("Покинуть игру") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -722,9 +722,9 @@ screen preferences():
 
                     vbox:
                         style_prefix "radio"
-                        label _("Режим экрана")
-                        textbutton _("Оконный") action Preference("display", "window")
-                        textbutton _("Полный") action Preference("display", "fullscreen")
+                        label _("Картинка")
+                        textbutton _("В окне") action Preference("display", "window")
+                        textbutton _("На весь экран") action Preference("display", "fullscreen")
 
                 vbox:
                     style_prefix "check"

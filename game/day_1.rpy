@@ -32,8 +32,7 @@ label day_1:
     stop nature fadeout 1
     stop music fadeout 0.5
 
-    scene notebook with fade
-    play nature "audio/writing-pencil.ogg"
+    scene nebo with fade
     "Я достала из сумки тетрадь и карандаш, немедленно перенося мимолетный поток мыслей на бумагу"
     "Странно, что работая над книгой дома, я не додумалась до подобного. Идея не самая сложная, но она пришла ко мне только с выходом во внешний мир"
     "Хотя, идея сюжета пришла во время разговора с мамой, когда я рассказала ей про свое путешествие"
@@ -183,7 +182,7 @@ label molchat:
     "Определенно у них есть то, чего мы не привыкли видеть или замечать за призмой прозвищ"
     "Нельзя судить книгу по обложке, так вроде говорилось в одной народной поговорке"
     stop audio fadeout 1
-    play music "music/Soul.mp3"
+    play music "music/Soul.ogg"
     play nature "audio/fireplace.ogg"
 
     scene martha_home_room_n with fade

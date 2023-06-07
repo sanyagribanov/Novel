@@ -23,25 +23,25 @@ init python:
 ## Цвета текста в интерфейсе.
 
 ## Акцентный цвет используется в заголовках и подчёркнутых текстах.
-define gui.accent_color = '#96bbdd'
+define gui.accent_color = '#712828'
 
 ## Цвет, используемый в текстовой кнопке, когда она не выбрана и не наведена.
-define gui.idle_color = '#6299ff'
+define gui.idle_color = '#251818'
 
 ## Small_color используется в маленьком тексте, который должен быть ярче/темнее,
 ## для того, чтобы выделяться.
-define gui.idle_small_color = '#888888'
+define gui.idle_small_color = '#3d2929'
 
 ## Цвет, используемых в кнопках и панелях, когда они наведены.
-define gui.hover_color = '#0a1c2e'
+define gui.hover_color = '#e6ccbd'
 
 ## Цвет, используемый текстовой кнопкой, когда она выбрана, но не наведена.
 ## Кнопка может быть выбрана, если это текущий экран или текущее значение
 ## настройки.
-define gui.selected_color = '#555555'
+define gui.selected_color = '#332a2a'
 
 ## Цвет, используемый текстовой кнопкой, когда она не может быть выбрана.
-define gui.insensitive_color = '#aaaaaa7f'
+define gui.insensitive_color = '#5042427f'
 
 ## Цвета, используемые для частей панелей, которые не заполняются. Они
 ## используются не напрямую, а только при воссоздании файлов изображений.
@@ -49,8 +49,8 @@ define gui.muted_color = '#6684a3'
 define gui.hover_muted_color = '#99adc1'
 
 ## Цвета, используемые в тексте диалогов и выборов.
-define gui.text_color = '#305263'
-define gui.interface_text_color = '#305263'
+define gui.text_color = '#3d1e10'
+define gui.interface_text_color = '#3d1e10'
 
 
 ## Шрифты и их размеры #########################################################
@@ -71,7 +71,7 @@ define gui.text_size = 33
 define gui.name_text_size = 45
 
 ## Размер текста в пользовательском интерфейсе.
-define gui.interface_text_size = 33
+define gui.interface_text_size = 40
 
 ## Размер заголовков в пользовательском интерфейсе.
 define gui.label_text_size = 36
@@ -80,7 +80,7 @@ define gui.label_text_size = 36
 define gui.notify_text_size = 24
 
 ## Размер заголовка игры.
-define gui.title_text_size = 75
+define gui.title_text_size = 70
 
 
 ## Главное и игровое меню. #####################################################
@@ -153,7 +153,7 @@ define gui.button_width = None
 define gui.button_height = None
 
 ## Границы каждой стороны кнопки в порядке слева, сверху, справа, снизу.
-define gui.button_borders = Borders(6, 6, 6, 6)
+define gui.button_borders = Borders(9, 9, 6, 6)
 
 ## Если True, фон изображения будет моститься. Если False, фон изображения будет
 ## линейно масштабирован.
@@ -213,7 +213,7 @@ define gui.choice_button_borders = Borders(150, 8, 150, 8)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = "#618f96"
+define gui.choice_button_text_idle_color = "#8d5252bc"
 define gui.choice_button_text_hover_color = "#ffffff"
 define gui.choice_button_text_insensitive_color = "#444444"
 
@@ -435,7 +435,7 @@ init python:
         gui.name_text_size = 54
         gui.notify_text_size = 38
         gui.interface_text_size = 45
-        gui.button_text_size = 45
+        gui.button_text_size = 50
         gui.label_text_size = 51
 
         ## Регулирует местоположение текстового окна.
