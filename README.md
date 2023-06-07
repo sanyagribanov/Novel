@@ -5,3 +5,5 @@
 музыка - https://freemusicarchive.org/<br>
 спрайты - https://vk.com/ayri_attic<br>
 сценарий и код - palmistriya (группа ВК: https://vk.com/teabagggames)<br>
+## Работа над новеллой
+[Прочти меня](https://github.com/sanyagribanov/7-8-semestres/blob/main/Diplom/readme.md)
