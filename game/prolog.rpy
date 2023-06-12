@@ -101,13 +101,21 @@ label tumb:
     scene bedroom_1 with fade
     "Вуаля, и тетрадь легким движением руки отправилась прямиком в сумку"
     $ NotebookCount += 1
-    $ renpy.notify (f"Собрано тетрадей: {NotebookCount}/3")
+    
     if NotebookCount == 3:
         scene bedroom_1 with fade
+        $ AddAchieve ("1-2-3-4-5! Я иду искать", "Вы собрали все тетради")
         "Я решила не задерживать мать и быстро спустилась вниз."
+        jump garden
+    elif NotebookCount > 3:
+        scene bedroom_1 with fade
+        $ NotebookCount -= 1
+        $ AddAchieve ("1-2-3-4-5! Я иду искать", "Вы собрали все тетради")
+        "Все тетради собраны! Можно идти дальше"
         jump garden
     else:
         scene bedroom_1 with fade
+        $ renpy.notify (f"Собрано тетрадей: {NotebookCount}/3")
         "Собраны не все тетради! Нужно вернуться обратно"
         jump bedroom
 
@@ -120,16 +128,22 @@ label wardrobe:
     "Чтобы нож не повредил сумку, пришлось обмотать лезвие листом бумаги"
     "Напоследок я решила взять вторую рубашку. Помимо ее основной функции как запасной одежды, на ней можно будет спать как на подушке"
     "Перед тем, как покинуть комнату, я выглянула в окно. Снаружи меня ждала мама, желая проводить"
-
     $ NotebookCount += 2
-    $ renpy.notify (f"Собрано тетрадей: {NotebookCount}/3")
-    #чуть позже надо добавить ачивку
+    
     if NotebookCount == 3:
         scene bedroom_1 with fade
+        $ renpy.notify (f"Собрано тетрадей: {NotebookCount}/3")
         "Я решила не задерживать мать и быстро спустилась вниз."
+        jump garden
+    elif NotebookCount > 3:
+        scene bedroom_1 with fade
+        $ NotebookCount -= 1
+        $ renpy.notify (f"Собрано тетрадей: {NotebookCount}/3")
+        "Все тетради собраны! Можно идти дальше"
         jump garden
     else:
         scene bedroom_1 with fade
+        $ renpy.notify (f"Собрано тетрадей: {NotebookCount}/3")
         "Собраны не все тетради! Нужно вернуться обратно"
         jump bedroom
     return
@@ -158,7 +172,7 @@ label garden:
     hide marianna with dissolve
     "Собравшись с чувствами, я покинула родной дом, видя, как мама машет мне рукой вслед"
     "Так начался первый день моего путешествия..."
-    # и тут надо добавить ачивку
+    $ AddAchieve ("Вокруг света за 7 дней", "Вы начали путешествие")
     stop nature fadeout 1
     jump day_1
     return

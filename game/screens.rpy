@@ -1253,6 +1253,16 @@ screen notify(message):
 
     timer 3.25 action Hide('notify')
 
+screen notifyAchieve(message, title, currentImage):
+
+    zorder 100
+    style_prefix "notify"
+
+    frame at notifyAchieve_appear:
+        text "{b}[title]{/b}\n[message!tq]{image=[currentImage]}"
+
+    timer 3.25 action Hide('notifyAchieve')
+
 
 transform notify_appear:
     on show:
@@ -1260,6 +1270,14 @@ transform notify_appear:
         linear .25 alpha 1.0
     on hide:
         linear .5 alpha 0.0
+
+transform notifyAchieve_appear:
+    on show:
+        xalign 2.0
+        alpha 1
+        linear .25 xalign 0.9
+    on hide:
+        linear .5 xalign 2.0
 
 
 style notify_frame is empty

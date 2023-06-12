@@ -4,11 +4,13 @@
 
 # Определение персонажей игры.
 define c = Character('Шарлотта', color="#3c296d")
-define mar = Character('Марианна', color="#5f1919", image='marianna')
+define mar = Character('Мама', color="#5f1919", image='marianna')
 define n = Character(None, kind=nvl)
 define g = Character('Девушка', color="#1c660c", image='martha')
 define mt = Character('Марта', color="#1c660c", image='martha')
 define u = Character('Дядя Марты', color="#0e425d", image='uncle')
+define gel = Character('Девушка', color="#a47000", image="eleonora")
+define el = Character('Элеонора', color="#a47000", image="eleonora")
 
 define config.mouse={"default" : [("gui/cursors/Cursor 003_Green.png", 0,0)]}
 #Аудио
@@ -101,3 +103,24 @@ init:
 init:
     python:
         NotebookCount = 0
+
+        allAchievements = {
+            "1-2-3-4-5! Я иду искать" : "achievements/book.png",
+            "Вокруг света за 7 дней" : "achievements/earth.png",
+            "Хранительница очага" : "achievements/village_girl.png",
+            "Психолог" : "achievements/roses.png",
+            "Спокойная ночь" : "achievements/bear.png",
+            "Обед раздели с другом" : "achievements/bag.png",
+            "Вместе веселей" : "achievements/doll.png"
+        }
+
+        imageAchieve = None
+
+        persistent.AddAchieve = []
+
+        def AddAchieve(achieve, message):
+            if not achieve in persistent.AddAchieve:
+                persistent.AddAchieve.append(achieve)
+                imageAchieve = allAchievements[achieve]
+                renpy.show_screen("notifyAchieve", message, achieve, imageAchieve)
+            
